@@ -19,13 +19,13 @@ int main() {
     binomial_distribution<unsigned> dstrr(n+1,0.5);
 
     for (uint64_t i = 0;i<n;++i){
-        arr[i]=i;
+        arr[i]=dstr(rng);
         countt[i]=0;
     }
     for (uint64_t i = 0;i<num;++i){
-        ran[i]=dstr(rng); //random numbers
+        //ran[i]=dstr(rng); //random numbers
         //ran[i]=-1; //non-existing numbers
-        //ran[i]=dstrr(rng); //binomial-distributed numbers
+        ran[i]=dstrr(rng); //binomial-distributed numbers
     }
 
     auto begin = chrono :: steady_clock ::now();
